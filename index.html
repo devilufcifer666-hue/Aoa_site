@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AOA Info</title>
 
 <style>
@@ -14,37 +13,46 @@ body{
     margin:0;
     padding:0;
 }
-
 .container{
-    max-width:800px;
+    max-width:850px;
     margin:auto;
     padding:40px 20px;
 }
-
-h1{
-    font-size:48px;
+.language{
+    text-align:right;
     margin-bottom:30px;
 }
-
+button{
+    background:#1e1e1e;
+    color:white;
+    border:1px solid #555;
+    padding:10px 16px;
+    border-radius:10px;
+    font-size:18px;
+    margin-left:8px;
+}
+h1{
+    font-size:44px;
+    margin-bottom:30px;
+}
 p, li{
     font-size:24px;
     line-height:1.6;
 }
-
 .box{
     background:#1e1e1e;
     padding:25px;
     border-radius:15px;
     margin-top:30px;
 }
-
 .footer{
     margin-top:40px;
-    font-size:18px;
 }
-
 a{
     color:#4db8ff;
+}
+.hidden{
+    display:none;
 }
 </style>
 </head>
@@ -53,17 +61,19 @@ a{
 
 <div class="container">
 
+<div class="language">
+<button onclick="showItalian()">🇮🇹 Italiano</button>
+<button onclick="showEnglish()">🇬🇧 English</button>
+</div>
+
+<div id="it">
+
 <h1>Atassia-Aprassia Oculomotoria (AOA)</h1>
 
 <div class="box">
+<p>Ho una rara malattia neurologica chiamata AOA.</p>
 
-<p>
-Ho una rara malattia neurologica chiamata AOA.
-</p>
-
-<p>
-Questa condizione può influenzare:
-</p>
+<p>Questa condizione può influenzare:</p>
 
 <ul>
 <li>equilibrio</li>
@@ -78,27 +88,69 @@ I miei movimenti possono sembrare insoliti,
 ma non sono causati da alcol o droghe.
 </p>
 
-<p>
-Grazie per la comprensione.
-</p>
-
+<p>Grazie per la comprensione.</p>
 </div>
 
 <div class="footer">
-
-<p>
-Maggiori informazioni:
-</p>
-
+<p>Maggiori informazioni:</p>
 <p>
 <a href="https://rarediseases.org/rare-diseases/ataxia-with-oculomotor-apraxia/" target="_blank">
 National Organization for Rare Disorders
 </a>
 </p>
-
 </div>
 
 </div>
+
+<div id="en" class="hidden">
+
+<h1>Ataxia with Oculomotor Apraxia (AOA)</h1>
+
+<div class="box">
+<p>I have a rare neurological condition called AOA.</p>
+
+<p>This condition can affect:</p>
+
+<ul>
+<li>balance</li>
+<li>coordination</li>
+<li>walking</li>
+<li>eye movements</li>
+<li>body movements</li>
+</ul>
+
+<p>
+My movements may look unusual,
+but they are not caused by alcohol or drugs.
+</p>
+
+<p>Thank you for your understanding.</p>
+</div>
+
+<div class="footer">
+<p>More information:</p>
+<p>
+<a href="https://rarediseases.org/rare-diseases/ataxia-with-oculomotor-apraxia/" target="_blank">
+National Organization for Rare Disorders
+</a>
+</p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function showItalian(){
+    document.getElementById("it").classList.remove("hidden");
+    document.getElementById("en").classList.add("hidden");
+}
+
+function showEnglish(){
+    document.getElementById("en").classList.remove("hidden");
+    document.getElementById("it").classList.add("hidden");
+}
+</script>
 
 </body>
 </html>
